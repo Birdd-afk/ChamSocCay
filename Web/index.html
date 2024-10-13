@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc cây trồng</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hệ thống chăm sóc cây trồng</h1>
+    </header>
+    <div class="main">
+        <main>
+            <div>
+                <p style="display: center; font-size: 5vh; padding-bottom: 10px;color: rgb(45, 56, 151);">Cảm biến</p>
+                <div class="sensors">
+                    <div class="sensor-item">
+                        <div id="tempp"></div>
+                        <div style="text-align: center; padding: 20px;font-weight: 600; color: blue;">Nhiệt độ</div>
+                    </div>
+                    <div class="sensor-item">
+                        <div id="hum"></div>
+                        <div style="text-align: center; padding: 20px;font-weight: 600; color: blue;">Độ ẩm</div>
+                    </div>
+                    <div class="sensor-item">
+                        <div id="dad"></div>
+                        <div style="text-align: center; padding: 20px;font-weight: 600; color: blue;">Độ ẩm đất</div>
+                    </div>
+                    <div class="sensor-item">
+                        <img id="temp_img" src="./img/temp_l.png" alt="img" style="width: 50%">
+                        <div class="Canhbao">
+                            <label class="switch">
+                        <input type="checkbox" id="Checkbox" disabled>
+                        <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div style="text-align: center; padding: 20px; font-weight: 600; color: blue;">Quá nóng</div>
+                    </div>
+                </div>
+                <p style="display: center; font-size: 5vh; padding-bottom: 5px;padding-top: 25px; color: rgb(45, 56, 151);">Điều khiển</p>
+                <div class="devices">
+                    <div class="devices-item">
+                        <img id="auto_img" src="./img/auto_off.png" alt="img" style="width: 50%; padding-top: 30px;">
+                        <div style="text-align: center; padding: 20px; font-weight: 600; color: blue;">Chế độ tự động</div>
+                    </div>
+                    <div class="devices-item">
+                        <img id="Pum_img" src="./img/pump_off.png" alt="img" style="width: 50%; padding-top: 20px;">
+                        <div style="text-align: center; padding: 20px; font-weight: 600; color: blue;">Bơm nước</div>
+                    </div>
+                    <div class="devices-item">
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="50" class="slider1" id="nd">
+                            <p id="rangeValuee" style="margin-left: 67px;"></p>
+                        </div>
+                        <div style="text-align: center; padding: 20px;font-weight: 600; color: blue;">Nhiệt độ cần tưới nước</div>
+                    </div>
+                    <div class="devices-item">
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="100" value="50" class="slider1" id="da">
+                            <p id="rangeValue" style="margin-left: 67px;"></p>
+                        </div>
+                        <div style="text-align: center; padding: 20px;font-weight: 600; color: blue;">Độ ẩm đất cần tưới nước</div>
+                    </div>
+                    <div class="devices-item">
+                        <img id="Suoi_img" src="/img/light_off.png" alt="img" style="width: 50%; padding-top: 40px;">
+                        <div style="text-align: center; padding-top: 20px; padding-bottom: 20px; font-weight: 600; color: blue;">Đèn sưởi</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="control.js"></script>
+</body>
+
+</html>

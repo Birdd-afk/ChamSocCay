@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    background: #f0eaea;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header {
+    background-image: url(data:image/jpeg;base64,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);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: center;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+main {
+    background: #d8cdcd;
+    padding: 30px;
+    flex: 5 5 150px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sensors {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 140px;
+    box-shadow: #ccc;
+}
+
+.sensor-item {
+    background-color: #ffffff;
+    gap: 160px;
+    border-radius: 240px;
+    padding: 60px;
+}
+
+.devices {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 160px;
+    padding-top: 10px;
+}
+
+.btn {
+    background-color: #9cb1bd;
+    gap: 160px;
+    color: #8b1919;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.devices-item {
+    background-color: #ffffff;
+    gap: 164px;
+    border-radius: 546px;
+    padding-bottom: 10px;
+}
+
+.devices-item>img {
+    height: auto;
+    width: auto;
+}
+
+#tempp .rs-range-color {
+    background-color: #f31919;
+}
+
+#tempp .rs-handle:after {
+    background-color: #000000;
+}
+
+#tempp .rs-border {
+    border-color: #dbd2d2;
+}
+
+#tempp .rs-bg-color {
+    background-color: #ffffff
+}
+
+#hum .rs-range-color {
+    background-color: #2563c0;
+}
+
+#hum .rs-handle:after {
+    background-color: #000000;
+}
+
+#hum .rs-border {
+    border-color: #dbd2d2;
+}
+
+#hum .rs-bg-color {
+    background-color: #ffffff
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #eb1818;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #b11e1e;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slidecontainer {
+    width: 160px;
+    /* Width of the outside container */
+    height: 25px;
+    padding-top: 120px;
+    padding-bottom: 48px;
+    padding-left: 46px;
+    padding-right: 28px;
+}
+
+
+/* The slider itself */
+
+.slider1 {
+    border-radius: 50px;
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 160px;
+    /* Full-width */
+    height: 30px;
+    /* Specified height */
+    background: #94c743;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+
+/* Mouse-over effects */
+
+.slider1:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
+.slider1::-webkit-slider-thumb {
+    border-radius: 32px;
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #04AA6D;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider1::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #04AA6D;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
